@@ -84,6 +84,7 @@ ol {
 ul li, 
 ol li { 
     margin-top: (@baseline/2 * 1em);
+    list-style: none;
 }
 
 li li {
@@ -117,9 +118,7 @@ abbr[title] {
 border-bottom : 1px dotted @grey--light-3; 
 cursor : help; }
 
-b, strong, em { 
-font-family: @font-stack__open;
-font-style: normal;
+b, strong { 
 font-weight : 700; }
 
 i {
@@ -193,9 +192,20 @@ time {
     *width: 40em;
 }
 
+.d-section--modification-2 .the-measure {
+    .themeasurexlg();
+    margin: auto;
+    p{
+        font-size: 1.5em;
+        .min-width(51.375em{
+            column-count: 2;
+            column-gap: 2em;
+        })
+    }
+}
 //empty things in the main
 .the-measure :empty {
-    display: none;
+    //display: none;
 }
 
 //Type in the measure you don't have access to 

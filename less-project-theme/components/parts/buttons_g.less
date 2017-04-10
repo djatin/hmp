@@ -28,44 +28,28 @@ button, .o-btn a {
 
 .o-btn a {
 display : inline-block;
-margin : 0.75em 0; // 12px 0 12px
-padding : 0.75em 1.5em; // height 48px; 
-font-size: 1em;
-font-weight: 700;
-line-height: 1.5;
+//margin : 0.75em 0; // 12px 0 12px
+padding : 0.75em 1.75em; // height 48px; 
+font-size: 1.125em;
+font-weight: 500;
+line-height: 1;
 text-transform: uppercase;
 text-align: center;
 text-decoration : none;
 .letterspacing120();
-color : @white;
+color : @btncolor;
+border: 1px solid @btncolor;
 // border radius if required 
 //.rounded(1.5em);
 cursor : pointer;
 // background function
-background-color : darken(@btnbackgroundcolor, 2%);
+//background-color : darken(@btnbackgroundcolor, 2%);
     
-.transition(background @duration-promptly ease-in-out);
+.transition(all @duration-promptly ease-in-out);
     
     &:hover, &:active, &:focus {
-        color: @white;
-         
-    }
-
-    &:hover {
+        color: @white;         
         background-color : @btnbackgroundcolor;
-    }
-    
-    &:active, &:focus {
-        margin-top: 0.8125em;
-        margin-bottom: 0.6875em; // 13px 0 11px
-        background-color : lighten(@btnbackgroundcolor, 2%);
-    }
-    
-    
-
-    &:visited {
-        color: @white;
-        opacity: 0.8;
     }
     
 .lt-ie8 & {

@@ -67,22 +67,20 @@
 
 .menu a, .menu span {
     display: block;
-    padding: 1.25em;
-    font-size: 0.75em;
+    padding: 0 0 0 2em;
+    font-size: 1.1875em;
     text-decoration: none;
+    color: @grey--dark-2;
     &:active, &:focus {
         outline: 0;
     }
-    &:active, &:focus, &.active, &.is-active {
-        background: darken(@basecolor, 10%);
-        color: @white;
-    }
-    &:hover {
-        
-        background: @basecolor;
-        color: @whiteonblack;
+    /*&:active, &:focus, &.active, &.is-active,*/ &:hover {   
+        color: lighten(@grey--dark-2, 25%);
     }
     
+}
+.menu li.first a{
+    padding-left: 0;
 }
 
 // Submenu -------------------
@@ -92,8 +90,8 @@
 
 // both 
 .global-nav a, .global-nav span, .utility-nav a {
-    font-family: inherit;
     .letterspacing60();
+    font-weight: 500;
 }
 
 // global navigation -------------------

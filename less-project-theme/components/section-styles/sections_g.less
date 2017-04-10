@@ -34,6 +34,37 @@
 //Project specific components ---------------------------------
 
 
+.d-section--style-1,
+.d-section--style-2,
+.d-section--style-3{
+    margin: 0;
+    position: relative;
+    &:before{
+        .arrow-down();
+        content: '';
+        top: 0;
+        left: 48%;
+        position: absolute;
+    }
+}
+.d-section--style-1{
+    background: @greenbgcolor;
+    &:before{
+        border-top-color: @white;
+    }
+}
+.d-section--style-2{
+    background: @pinkbgcolor;
+    &:before{
+        border-top-color: @greenbgcolor;
+    }
+}
+.d-section--style-3{
+    background: @bluebgcolor;
+    &:before{
+        border-top-color: @pinkbgcolor;
+    }
+}
 .d-section--style-1 .section__o-splash {
     background-color: @grey--dark-1;
 }

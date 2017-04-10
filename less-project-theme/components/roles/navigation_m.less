@@ -65,10 +65,10 @@
     
 // navigation (role='navigation' -----------------------------
 .navigation {
-        width: 100%;
-        position: absolute;
-        top: 9em;//144px
-        z-index: @zindex-nav;
+    width: 100%;
+    position: absolute;
+    top: 8.75em;
+    z-index: @zindex-nav;
 }
     
 .navigation__wrapper {
@@ -77,12 +77,10 @@
     position: relative;
 }
 
-    
 .navigation .menu {
-    display: table;
-    
+    display: table;    
 }
-    
+
 .navigation .menu li {
     display: table-cell;
 }
@@ -97,14 +95,17 @@
 // global navigation -------------------
     
 .navigation__global-nav > .menu {
-    .one-half();
+    float: right;
+    margin-top: -1.2em;
 }
     
 // utility navigation -------------------
 .navigation__utility-nav {
     position: absolute;
-    top: -9em;//144px
+    top: -7em;//144px
     right: 0;
+    width: 100%;
+    max-width: 14em;
 }
 
 .navigation__utility-nav > .menu {
@@ -114,6 +115,11 @@
 //end 768 major
 });
 
+.min-width(62em{
+    .navigation__global-nav > .menu {
+        margin-top: -3.2em;
+    }
+});
 // Media Queries for component in situ 
 // navigation menu --------------------------------
 

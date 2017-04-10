@@ -5,7 +5,7 @@
 //@base-url : 'clockworkpie.bigmallet.co.uk'; //maybe useful on small builds
 @htmlcolor : @white; 
 @bodycolor : @htmlcolor; //
-@textcolor : @grey; // text grey #757575
+@textcolor : #4d4d4d; // text grey #4d4d4d
 
 // 2. TYPOGRAPHY 			==============================
 // Font Stack add a font stack (if you want to fallback to something more intesting than aerial or helvetia
@@ -14,9 +14,11 @@
 
 @font-stack__open: 'Open Sans', @fall-back--sans-serif;
 @font-stack__codefont : Monaco, Courier New, monospace;
+@font-stack__montersrat : 'Montserrat', @fall-back--sans-serif; //'Montserrat', sans-serif;
+@font-stack__roboto : 'Roboto', @fall-back--sans-serif; //'Roboto', sans-serif;
 
 
-@basefont : @font-stack__open;
+@basefont : @font-stack__roboto;
 @basefontsize : 1em;
 @baseline : 1.5; // don't define a unit or things will not scale
 @baselineunit: (@baseline * 1em);
@@ -47,7 +49,7 @@
 @grey--light-4: #807f7b; //#807f7b;
 
 @grey--dark-1: rgb(108,109,112); //#6c6d70
-@grey--dark-2: rgb(93,94,97); //#5d5e61
+@grey--dark-2: rgb(90,90,90); //#5a5a5a
 @grey--dark-3: rgb(74,71,71); //#4a4747
 @grey--dark-4: rgb(42,42,42); //#2a2a2a
 
@@ -64,18 +66,27 @@
 @grey-dk-color-80: darken(@grey, 80%);
 @grey-dk-color-90: darken(@grey, 90%);   
 
+// banner background colors
+@greenbgcolor: #7fcac3;
+@pinkbgcolor: #f06e6c;
+@bluebgcolor: #8fc9f8;
+
 // error, messages and warnings
 @errorcolor: #EF4836;
 @warningcolor: #F39C12;
 @okcolor: #019875;
 
+
 // links 
 @linkcolor: @basecolor;
+@linkfonts: @font-stack__montersrat;
 //** Link hover color set via `darken()` function.
 @linkcolor--hover: darken(@linkcolor, 5%);
 @linkcolor--visited: lighten(@linkcolor, 3%);
 
+@bannertextcolor: #2d2d2d;
 //Buttons
+@btncolor: #2d2d2d;
 @btnbackgroundcolor: @highlight--color-1;
 
 
@@ -94,7 +105,7 @@
 @formborder              : @grey--light-2;
 @formtext                : @grey--dark-1;
 @inputbackground 	     : @white; 
-@inputborder 		     : darken(@formbg,10%);
+@inputborder 		     : darken(@formbg,40%);
 @inputborderwidth	     : 1px;
 @inputborderstyle	     : solid;
 @placeholdercolor        : @grey--light-3; //#b5b5b5; 
@@ -148,8 +159,8 @@
 
 // Logo sizes
 //logo--site
-@siteLogoWidth: 17.5em; //280px;
-@siteLogoHeight: 4.125em; //66px;
+@siteLogoWidth: 10.5em; //280px;
+@siteLogoHeight: 5.125em; //66px;
 
 // gutter variable
 @gutter:                 6%;
