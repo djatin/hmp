@@ -1,0 +1,4 @@
+name = House Move Pro
+description = House Move Pro
+core = 7.x
+base theme = common
