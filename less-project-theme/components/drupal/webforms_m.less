@@ -2,143 +2,570 @@
 // Media Queries for component
 
 /* !webforms --------------------------------------------------- */
-// Styles for DRUPAL FORMS
+// Styles for DRUPAL WEBFORMS
+
 /* clases
-.form (gerneric all forms)
 .webform-client-form (the form)
-.form__wrapper
-
-basic mark up
-- <div .webform-component
---- label
------ input (form-text, form-textarea, form-select, form-email)
-- </div>
-*/
-
-/*types
--markup (area code)
--select
--textfield
--number (same as textfield)
--textarea
--checkboxes
--radio
--permission (text area)
--date
 
 */
+//.webform-client-form {
+    // 1px/0.0625em
+    //.min-width(0.0625em; { 
+        
+    //});
+	// 320px/20em
+	//.min-width(20em; {
+        
+    //});
+	// 768px/48em
+	//.min-width(48em; {
+		
+	//});
+	// 1248px/78em
+	//.min-width(78em; {
+		
+	//});
+//}
 
-
- 
-/*///////////////////////////////////////////////////////////
-
-    Webforms
-
-//////////////////////////////////////////////////// */
-
-//local varible 
-@small_major: 18.5em; //300px as we still waht opera mini to work
-
-// make these infield top aligned 
-//http://uxmovement.com/forms/why-infield-top-aligned-form-labels-are-quickest-to-scan/
-//only for browsers that can cope with this so from 320px up 
-
-.min-width(@small_major {
-
-// nest all this should happen in the grid if its not in a grid there is a reason and shouldn't get this styling
-.o-grid { 
-    
-    //alternative setups div becomes the input - select, radios, check boxes, date, etc
-    // We are going to tidy this up more
-    .webform-component-date .form-item {
-    display: inline-block;
-    margin: 0 0.5em 0 0;
-    min-width: 4.5em; 
-    .one-quarter();
-    }
-    
-// End nest
-}
-
-//end @small_major
-});
 
 
 // Media Queries for component in situ
-// 320px/20em
+
 .min-width(20em; {
-
-.contentinfo__newsletter {
-        max-width: 22.5em;
-}
     
-.contentinfo__newsletter form {
-    position: relative;   
-}
-  
-.contentinfo__newsletter .webform-component-email {
-        margin: 0;
-        .golden-section--lg();
-}
+//Question marks with helptext
+    .tooltip {
+        width: 44px;
+        height: 44px;
+        float:left;
+        background: none;
+        -webkit-appearance: none;
+        border: none;
+        position: relative;
+        left: -10px;
+    }
 
-.contentinfo__newsletter .form-actions {
-    
-    .golden-section--sm();
-    position: absolute;
-    right: 0;
-    bottom: -0.1875em; //-3px mathc button margin
-    overflow: visible;
-}
-    
-    .contentinfo__newsletter .webform-submit {
-        //at some widths this can become compressed so reduce the padding and make sure the text doesn't wrap
-        padding-left: 0.375em;
-        padding-right: 0.375em;
-        white-space: nowrap;
-        //position: absolute;
-        //bottom: -4.875em; //78px
+    .tooltip:hover{
+        cursor: pointer;
+    }
 
+    .tooltip:hover:after{
+      content: attr(data-tooltip);
+      border: 1px solid #fc0;
+        padding: 3px 6px;
+        background: #fffea1;
+        font-size: 12px;
+        position:absolute;
+        margin-left: 1em;
+        min-width: 18em;
+    }
+
+    .tooltip span[aria-hidden] {
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        font-size: 17px;
+        font-weight:bold;
+        text-align: center;
+        line-height: 1.4em;
+        background: @basecolor;
+        color: white;
+        border-radius: 22px;
+        position:relative;
+    }
+
+    .tooltip:hover span[aria-hidden]{
+        opacity: 0.6;
+      transition: opacity .1s ease-in-out;
+      -moz-transition: opacity .1s ease-in-out;
+      -webkit-transition: opacity .1s ease-in-out;
     }
     
-    .contentinfo__newsletter .webform-component--privacy-statement  {
-        .clear-both();
-    } 
+    input[type='text'], input[type='email'], textarea{
+        float: none;
+    }
 
-    .placeholder .contentinfo__newsletter .webform-submit {
-        .one-whole();
-        //bottom: auto;
-        //top:-0.375em; //shift it up to account for the margin
+//description
+    .enquiry-form .description p{
+        margin-top: 0;
+    }
+    .enquiry-form .form-item .description p{
+        font-size: .875em;
+        color: @basecolor;
+    }
+    
+//Results form
+     .enquiry-form__results{
+        margin-top: 5em;
+    }
+    
+    .enquiry-form__results .enquiry-result__title{
+        position: absolute;
+        top: -3em;
+        left: -0.15em;
+        font-size: 1.625em;
+    }
+    
+    
+//form submit
+        
+    .enquiry-form .form-actions{
+        position: relative;
+        padding-top: 1.5em;
+    }
+    
+    .enquiry-form .form-submit{
+       margin: 0 auto;
+    }
+    
+    .enquiry-form .form-actions__wrapper{
+        width: 14em;
+        margin: 0 auto;
+        position: relative;
+    } 
+    
+//Throbber
+    .enquiry-form .ajax-progress-throbber{
+        position: absolute;
+        right: 0em;
+        top: 16px;
+    }
+    
+    
+//Price estimate
+    
+    .enquiry-result__business .business__location{
+        word-wrap: break-word;
+    }
+    
+    
+    .enquiry-result__estimate--numeric{
+        margin: 0 0 .5em 0;
+    }
+    
+    .enquiry__result__fulldetails{
+        font-size: 0.9375em;
+        padding: 4px;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 1em;
+    }
+    
+    .details-link__wrapper{
+        height: 44px;
+        width: 10em;
+        //margin-left: 4.5em;
+    }
+    
+//Suffix
+    .enquiry-form__results .d-section--suffix{
+        margin: 2em 0;
+        padding: 0;
+    }
+    
+    
+//Follow on enquiry    
+    
+    .enquiry-form .followon__head{
+        position: fixed;
+        padding: 1em;
+        top: 0;
+        z-index: 999;
+        background-color: rgba(33, 33, 33, 0.9);
+        left: 0px;
+        width: 100%;
+        color: white;
+        //height: 6em;
+        box-shadow: 0 3px 8px 0 black;
+    }
+    
+    .enquiry-form .followon__head.full{
+        background-color: rgba(33, 33, 33, 0.9);
+        transition: background-color .5s ease-in-out;
+        box-shadow: none;
+    }
+    
+    .enquiry-form .followon__form{
+        position: fixed; 
+        padding: 1em;
+        top: 0;
+        z-index: 996;
+        background-color: rgba(33, 33, 33, 0.9);
+        left: 0px;
+        width: 100%;
+        color: white;
+        //margin-top: 6em;
+        box-shadow: 0 3px 8px 0 black;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__title{
+        color: white;
+        font-weight: bold;
+    }
+
+    .enquiry-form .followon__wrapper .tooltip:after{
+        color: #656565;
+    }
+    
+    .enquiry-form .followon__wrapper fieldset{
+        border: none;
+    }
+   
+    .enquiry-form .followon__wrapper .followon-set__wrapper{
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__submit .form-actions__wrapper{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__head .form-actions__wrapper button{
+        -webkit-appearance: none;
+        border: none;
+        background-color: #924799;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 7em;
+        margin: 0.5em;
+        font-size: 0.875em;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__head .form-actions__wrapper .toggle__close {
+        background-color: #fff;
+        color: #1a1a1a;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__form .followon-set__wrapper--form{
+        margin: 1em auto;
+    }
+    
+    .js .enquiry-form .followon__wrapper .followon__form, .js .enquiry-form .followon__wrapper .followon__head {
+        -webkit-transform: translateY(-200%);
+        -moz-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+        -o-transform: translateY(-200%);
+        transform: translateY(-200%);
+         transition: transform .5s ease-in-out;
+       -moz-transition: transform .5s ease-in-out;
+       -webkit-transition: transform .5s ease-in-out;
+    }
+    
+    
+    .js .enquiry-form .followon__wrapper .followon__form.active, .js .enquiry-form .followon__wrapper .followon__head.active{
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+        transition: transform .5s ease-in-out;
+       -moz-transition: transform .5s ease-in-out;
+       -webkit-transition: transform .5s ease-in-out;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__submit input{
+        background-color: #7db925;
+        border: none;
+        opacity: 1;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__submit input:hover{
+        background-color: #7db925;
+        opacity: 0.9;
+        transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__form .tooltip:hover:after{
+      content: attr(data-tooltip);
+      border: 1px solid #fc0;
+        padding: 3px 6px;
+        background: #fffea1;
+        font-size: 12px;
+        position:absolute;
+        margin-left: 1em;
+        min-width: 12em;
+    }
+    
+    .enquiry-form .followon__form .toggle__close{
+        color: white;
+        background-color: transparent;
+        border: none;
+        font-size: 0.875em;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .enquiry-form .followon__form .more-info{
+        max-width: 36em;
+        margin: 1em auto;
+    }
+    
+    
+    .js .enquiry-form .followon__form .form-radios{
+        width: 17em;
+        margin: 0 auto;
+    }
+    
+    .js .enquiry-form .followon__form .form-item > label{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .js .enquiry-form .followon__wrapper .followon__form .form-type-textfield, .js .enquiry-form .followon__wrapper .followon__form .form-type-select{
+        margin: 1em auto;
+        width: 11em;
+    }
+    
+    .js .enquiry-form .followon__form .form-type-textfield input, .js .enquiry-form .followon__form .form-type-select select{
+        width: 100%;
+        max-width: none;
+    }
+    
+    
+    .js .enquiry-form .followon__form .form-type-radio input{
+        display: none;
+    }
+    
+    .js .enquiry-form .followon__form .form-type-radio label{
+        background-color:#bdbdbd;
+        color: #fff;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.875em;
+        padding: 0.6em;
+        border: 1px solid transparent;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .js .enquiry-form .followon__form .form-type-radio label:hover{
+        opacity: 0.9;
+         transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out;
+    }
+    
+    .js .enquiry-form .followon__form .form-type-radio{
+        float: left;
+        width: 8em;
+        margin: 0 0.25em;
+    }
+    
+    .js .enquiry-form .followon__form .form-type-radios .tooltip{
+        top: 0;
+        left: 0;
+    }
+    
+    
+    .js .enquiry-form .followon__form .form-type-radio input:checked + label{
+        background-color:#924799;
+        color: #fff;
+        border: 1px solid #dbdbdb;
+        //float: left;
+    }
+    
+    .js .enquiry-form .followon__wrapper .form-type-textfield.form-item-value .field-prefix{
+        top: 31px;
+        left: -13px;
+    }
+    
+    
+    
+    
+//Form fields
+    .enquiry-form .form-type-textfield.form-item-value input{
+        width: 10em;
+    }    
+    
+
+});
+
+
+.min-width(30em; {
+    
+   //description
+    .enquiry-form .description{
+        max-width: 80%;
+    }
+     
+});
+
+.min-width(40em; {
+    
+   //Results form title
+   .enquiry-form__results .enquiry-result__title{
+        top: -2.5em;
+        left: 0.5em;
     }
     
 });
 
 
-// SEE MODULE FOR BIG PAYMENT STYLING
-
-// SITE SPECIFIC ----------------------------------
-
-// Donate form ---------------------------------
-// Donate form currently uses webforms but this wil change in future versions
-
-/* Classes
-webform-client-form--donation
-
-
-
-*/
-
-/*// local mixin 
-.magic-width() { width:46.5%; }
-
-.min-width(@small_major {
-
-// Donate form styling ---
-.webform-client-form--donation .form-submit {
-    width: 100%;
-}
+.min-width(48em; {
+    .tooltip {
+        //position: static;
+        left: 0;
+        top: -3px;        
+    }
+    
+   .form-type-textfield .tooltip:hover:after, .form-type-textarea .tooltip:hover:after{
+        min-width: 8em;
+    }
+    
+   .form-type-select .tooltip:hover:after{
+        min-width: 19em;
+    }
     
     
-});*/
-
-//BIG PAYMENT NOW MOVED TO MODULE
+    input[type='text'], input[type='email'], textarea, select{
+        float: left;
+        max-width: 56%;
+    }
     
+       //description
+    .enquiry-form .description{
+        max-width: 56%;
+        margin: 0;
+    }
+    
+    //Follow ons
+    
+    .js .enquiry-form .followon-set__wrapper{
+        width: 80%;
+    }
+    
+    .js .enquiry-form .followon__head .followon__title{
+        max-width: 18em;
+    }
+    
+    .js .enquiry-form .followon__head .followon__title, .js .followon__head .followon__toggle {
+        float: left;
+    }
+    
+    .js .enquiry-form .followon__toggle{
+        margin-left: 2em;
+    }
+
+});
+
+//960px
+.min-width(60em; {
+    .enquiry-form .form-actions__wrapper{
+        width: 16em;
+    }
+    
+    .enquiry-results .hgroup__wrapper{
+        position: relative;
+    }
+    
+    .enquiry-results .hgroup__wrapper.business__estimates h4{
+        margin-bottom: 1em;
+    }    
+    
+    .details-link__wrapper{
+        position: absolute;
+        top: 0;
+        margin-left: 7.5em;
+    }
+    .enquiry__result__fulldetails{
+        //margin-top: 0;
+    }
+     .enquiry-result.list__item{
+        min-height: 6em;
+    }
+    
+//Follow on
+     .js .enquiry-form .followon__head .followon__title{
+        max-width: 36em;
+         line-height: 1.3em;
+         top: 8px;
+         position: relative;
+    }
+    
+    .js .enquiry-form .followon-set__wrapper{
+        padding: 0;
+        max-width: 52.5em;
+        width: 100%;
+    }
+    
+    .js .enquiry-form .followon__form .form-type-radios > label{
+        float: none;
+    }
+    
+});
+
+
+//1250px
+.min-width(78.1875em; {
+    .enquiry-form .description{
+        margin: 0 0 1.5em 0.57em;
+    }
+    
+    .enquiry-form .fieldset__description{
+        max-width: 100%;
+    }
+    
+    .enquiry-form .form-item .description{
+        position: relative;
+        margin-left: 25%;
+    }
+    
+    .enquiry-form .form-actions__wrapper{
+        width: 22em;
+    } 
+    
+     .enquiry-form .ajax-progress-throbber{
+        right: 2em;
+    }
+    
+    .enquiry-form .form-type-textfield.form-item-value .field-prefix{
+        top: 7px;
+        left: 144px;
+    }
+    
+    .enquiry-form .followon__wrapper .followon__head .form-actions__wrapper{
+        width: 100%;
+    }
+    
+    
+});
+
+.min-width(80em;{
+   
+    .enquiry-form .details-link__wrapper{
+        width: 8em;
+        right: 0;
+        height: 30px;
+        top: -4px;
+    }
+    
+    .enquiry-results ol li .hgroup__wrapper:last-child h4{
+        max-width: 63%;
+        margin-left: 2em;
+    }
+    .enquiry-results ol li .hgroup__wrapper:last-child h4 strong{
+        position: absolute;
+        top: -0.25em;
+        right: 2.5em;
+    }
+      
+    .enquiry-form .form-type-textfield.form-item-value .field-prefix{
+        left: 150px;
+    }
+    
+});
+
+.min-width(87.5em;{
+         
+    .enquiry-form .form-type-textfield.form-item-value .field-prefix{
+        left: 160px;
+    }
+    
+});

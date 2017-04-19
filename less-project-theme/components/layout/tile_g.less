@@ -43,16 +43,28 @@
 
 .o-tile__body {
     padding: 1.5em;
-    overflow: hidden;  
-    // for testing 
-    border: 1px solid #ccc;
+    overflow: hidden;
+    text-align: left;
+    color: @bannertextcolor;
+    .d-feed--style-1 &{
+        background: @pinkbgcolor;
+    }
+    .d-feed--style-2 &{
+        background: @lightgreenbgcolor;
+    }
+    a{
+        text-decoration: none;
+        color: @bannertextcolor;
+    }
 }
 
 .o-tile__title {
     .gamma--margin ();
-      text-transform: uppercase; 
-    font-weight: 600;
-    .letterspacing60();
+    font-weight: 700;
+    .letterspacing20();
+    .d-feed--style-1 & {
+        margin-top: 0;
+    }
 }
 
 .o-tile__subtitle {
@@ -64,12 +76,16 @@
 .o-tile__text {
     margin: 0 auto;
     max-width: 24em;
-    color: @grey--light-4;   
+    color: @grey--light-4;
+    .d-feed--style-1 &{
+        .visually-hidden();
+    }
 }
 
 .o-tile__btn {
-    // for testing 
-   border: 1px solid #ccc;
+    .d-feed--style-1 &{
+        .visually-hidden();
+    }
 }
 
 

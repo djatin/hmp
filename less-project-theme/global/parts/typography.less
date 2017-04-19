@@ -187,9 +187,17 @@ time {
 
 
 .the-measure {
-    .themeasure();
+    .themeasurelg();
     //IE6 hack to make it all readable
     *width: 40em;
+    p{
+        font-size: 1.25em;
+        color: #444;
+    }
+    h3{
+        font-size: 1.75em;
+        font-weight: 700;
+    }
 }
 
 .d-section--modification-2 .the-measure {
@@ -197,16 +205,93 @@ time {
     margin: auto;
     p{
         font-size: 1.5em;
-        .min-width(51.375em{
+        .min-width(75.025em{
             column-count: 2;
             column-gap: 2em;
-        })
+        });
+        br{
+            line-height: 2em;
+        }
     }
 }
 //empty things in the main
 .the-measure :empty {
     //display: none;
 }
+
+.d-section--text-2 {
+    .hgroup__title{
+        .visually-hidden();
+    }
+    p:first-child{
+        margin-top: 0;
+    }
+}
+
+.main__header{
+    .visually-hidden();
+}
+
+
+.layout--service{
+    .main__wrapper{
+        .min-width(40em{
+             max-width: 75%;
+        });
+    }
+    .main__page-title{
+        .min-width(60em{
+            max-width: 22.8575em;
+            margin-left: 1em;
+        });
+    }
+    .the-measure {
+        max-width: 100%;
+    }
+    .d-section--style-form{
+        .min-width-max(64.5625em{
+            margin-top: 2em; 
+        }70em);
+        .min-width-max(60em{
+            margin-top: 3em;
+        }64.56em);
+        .min-width-max(.1em{
+            margin-top: 5em;
+        }59.99em);
+    }
+    .image--service {
+        width: 150px;
+        float: right;
+        margin-top: -3.25em;
+    }
+    .image--service + .wrapper{
+        .min-width-max(.1em{
+            margin-top: 3em;
+        }64.56em);
+    }
+    .d-section--prefix .the-measure{
+        color: @basecolor;
+        .min-width(60em{
+            max-width: 90%;
+            margin-left: 1.75em;
+        });
+        .min-width(80em;{
+            max-width: 44em;
+        });
+        p{
+            margin-top: 1em;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.min-width(64.5em{
+    .layout--service .image--service{
+        margin-top: -3.75em;
+    }
+});
 
 //Type in the measure you don't have access to 
 //.s-the-measure p

@@ -21,7 +21,8 @@
 
 .title {
      //.kilo(); // total height 2.5 x baseline
-    font-weight: 700;
+    font-weight: 600;
+    color: @headingcolor;
     .wf-active & {
         font-family: @font-stack__montersrat;
     }
@@ -32,7 +33,19 @@
     .letterspacing120();
 } 
 
+.copy__hgroup{
+    max-width: 33em;
+    .title{
+        font-size: 3.3125em;
+        line-height: 1.15em;
+    }
+}
 
+.d-section--image .hgroup__title{
+    font-size: 1em;
+    text-transform: none;
+    text-align: left;
+}
 // Modifiers ----------------------------------------
 
 // Component in situ 

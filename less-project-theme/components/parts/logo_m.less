@@ -30,7 +30,7 @@
     .logo__img {
         // 1px/0.0625em
         .min-width(0.0625em; {
-        //display: none;  
+        display: none;  
         });
     }
 
@@ -52,8 +52,8 @@
     .backgroundsize .logo__link {
         // 1px/0.0625em
         .min-width(0.0625em; {
-            background-image: url('../img/skin/logo/no-svg_logo@2x.png'); 
-            background-size: @siteLogoWidth @siteLogoHeight;
+            background-image: url('../img/skin/logo/no-svg_logo@x2.png'); 
+            background-size: @siteLogoWidth auto;
         });
    }
     // if svg use the svg of the logo
@@ -71,5 +71,12 @@
         });
     }
 
+.small-print__logo a{
+    background-image: url('../img/skin/logo/horizontal/logo__white.png') !important;
+    width: 17em;
+    height: 4em;
+    max-width: 90%;
+    background-size: 100% auto !important;
+}
 
 // Media Queries for component insitue

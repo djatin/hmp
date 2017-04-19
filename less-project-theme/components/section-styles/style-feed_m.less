@@ -39,9 +39,9 @@
 .flexbox .d-feed__body {
     // 640px/40em
 	.min-width(40em; {
-        display: -ms-flexbox;  /* TWEENER - IE 10 */
-        display: -webkit-flex;
-        display: flex;
+        /*display: -ms-flexbox;  /* TWEENER - IE 10 */
+        /*display: -webkit-flex;
+        display: flex;*/
         
          
         -ms-flex-direction: row;
@@ -60,46 +60,40 @@
 
 
 .flexbox .d-feed__body > .o-tile {
+    margin-bottom: 2em;
     // 640px/40em
 	.min-width(40em; {
          -ms-flex: 1 0 50%;
         -webkit-flex: 1 0 50%;
         flex: 1 0 50%;
+        padding: 0 .5em;
     });
     // 960px/60em
 	.min-width(60em; {
-
+        margin-bottom: 0;
         -ms-flex: 1 0 33.33333333333333%;
         -webkit-flex: 1 0 33.33333333333333%;
         flex: 1 0 33.33333333333333%;
     });
-    
-    
 }
 
 
-/*// OVERFLOW SCROLL 
+// OVERFLOW SCROLL 
 
 //d-feed--style-2|Overflow Scroller (news slider)
 .d-feed--style-2 .d-feed__body > .o-tile {
-    .min-width(20em; {
-        position: relative;
-        &:before {
+    .min-width(40em; {
         display: block;
-        content: '';
-        height: 1px;
-        background: @whiteonblack;
-        position:absolute;
-        left: 19.1%;
-        right: 19.1%;
-        bottom: 0;
-        }
-    });
-    
+        width: 100%;
+         -ms-flex: 1 0 100%;
+        -webkit-flex: 1 0 100%;
+        flex: 1 0 100%;
+        max-width: 100%;
+    });    
 }
 
 
-//640px /40em
+/*//640px /40em
 .min-width(40em; {
 
 .d-feed--style-2 .d-feed__body > .o-tile {

@@ -43,7 +43,7 @@ iframe {
 // base figure in the main article
 
 figure {
-    margin-top : 1.5em; //2 x baseheightline
+    //margin-top : 1.5em; //2 x baseheightline
     background: transparent;
 }
 
@@ -80,28 +80,29 @@ q {
 */
 
 blockquote {
-    margin: 2.30769230769231em 0 1.38461538461538em;
+    margin-top: .5em;
     .beta ();
-    .letterspacing60();
-    font-family: @fall-back--serif;
     font-style: italic;
     clear: both;
     text-align: left;
+    position: relative;
     /* Text */
     p {
         font-size: inherit !important;
         line-height: inherit !important;
         font-weight: inherit !important;
+        color: @headingcolor !important;
+        display: inline;
     }
     /* Quotemarks */
     &:before {
         content:"\201C"; // double quote   
-        display: block;
-        margin-left: -1em;
+        display: inline;
         line-height: 1;
         font-weight: 700;
-        position: relative;
-        top: 1em;
+        position: static;
+        top: 0;
+        color: @headingcolor !important;
     }
 }
 
@@ -144,7 +145,7 @@ cite {
 
 
 .quote__attribution {
-    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .quote__attribution p {

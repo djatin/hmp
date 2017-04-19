@@ -20,7 +20,7 @@
 
 @basefont : @font-stack__roboto;
 @basefontsize : 1em;
-@baseline : 1.5; // don't define a unit or things will not scale
+@baseline : 1.25; // don't define a unit or things will not scale
 @baselineunit: (@baseline * 1em);
 
 
@@ -70,12 +70,15 @@
 @greenbgcolor: #7fcac3;
 @pinkbgcolor: #f06e6c;
 @bluebgcolor: #8fc9f8;
+@lightgreenbgcolor: #d8efed;
 
 // error, messages and warnings
 @errorcolor: #EF4836;
 @warningcolor: #F39C12;
 @okcolor: #019875;
 
+// headings color
+@headingcolor: #004c3f;
 
 // links 
 @linkcolor: @basecolor;
@@ -114,9 +117,10 @@
 @inputbackground--focus  : @white;
 @inputborder--focus 	 : lighten(@warningcolor, 10%);
 @inputtext               : @textcolor; // text grey #757575
-@submitbackground        : @grey;
-@submitborder            : @grey;
+@submitbackground        : @basecolor;
+@submitborder            : @basecolor;
 @submittext              : @white; 
+@borderNormalWidth       : 1px;
 
 // 6. LAYOUT 				==============================
 
@@ -160,7 +164,7 @@
 // Logo sizes
 //logo--site
 @siteLogoWidth: 10.5em; //280px;
-@siteLogoHeight: 5.125em; //66px;
+@siteLogoHeight: 8.125em; //66px;
 
 // gutter variable
 @gutter:                 6%;

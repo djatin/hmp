@@ -169,3 +169,153 @@
 
 //end @small_major
 });
+// General form object holder
+.form-item {
+    margin: 0 .5em .5em;
+    .clearfix();
+   //clear: both;
+    .min-width-max(.1em{
+        margin-left: 0;
+    }53em);
+}
+
+// rewrite system menu
+form .description {
+   &:extend(label);
+    clear: both;
+}
+
+// drupal's required 
+.form-required {
+    //color: @errorcolor;
+    color: inherit;
+    .visually-hidden();
+}
+
+// Text area 
+.form-textarea-wrapper {
+    margin-top: 0;
+}
+// get rid of this
+.grippie {
+    display: none !important;
+}
+
+// checkboxes and radios 
+/* 
+- <div .form-checkboxes / .form-radios
+-- <div .form-type-radio / form-type-checkbox
+--- input 
+--- label 
+*/
+.form-type-checkbox{
+    margin-bottom: 0;
+}
+.form-type-checkbox label, .form-type-radio label {
+    display: inline;  
+    margin: 0.2em 0;
+}
+
+.form-checkboxes .form-item, .form-radios .form-item {
+    margin: 0;
+}
+label.option {
+    .min-width(78.1875em{
+        //margin-left: 32%;
+    });
+}
+.form-type-checkbox label.option{
+    .min-width(78.1875em{
+        margin-left: 0;
+    });
+}
+.form-radios .form-item-title + .form-item-title{
+    .min-width(78.1875em{
+        margin-left: 21%;
+        margin-top: -.5em;
+    });
+}
+.form-radios + .field-suffix button.tooltip{
+    top: -3.5em;
+    left: 6em;
+    .min-width(78.1875em{
+        left: 46%;
+        top: -4.2em;
+    });
+}
+
+.property-details__radios .form-type-radio + .form-type-radio{
+    .min-width(78.1875em{
+        margin-left: 25%;
+        margin-top: -.5em;
+    });
+}
+
+/* Dupal FORMS & WEBFORMS LAYOUTS ------------------------------------------- */
+
+// USER FORMS EG. LOGIN / PASSWORD
+//.user-form
+// Modifier 
+//.user-form--page
+
+
+.min-width-max(.1em{
+    fieldset{
+        padding: 0;
+        min-width: 0;
+        width: 100%;
+        legend{
+            padding: 0;
+            span{
+                padding: 0 .5em 0 0;
+            }
+        }
+        .form-item{
+            label{
+                max-width: 86%;
+            }
+        }
+    }
+}53em);
+.min-width-max(.1em{
+    .form-item{
+        margin: 0 0 .5em;
+    }
+    label{
+        max-width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+    .form-type-checkbox label{
+        float: left;
+    }
+    input, textarea, select{
+        float: none;
+        max-width: 64%;
+    }
+}78.125em);
+.min-width-max(60em{
+    input, textarea, select{
+        float: none;
+        max-width: 64%;
+    }
+}78.125em);
+.min-width-max(.1em{
+    input, textarea{
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    input[type='checkbox'],
+    input[type='radio'],
+    input[type='submit'],
+    select{
+        width: auto;
+    }
+}59.99em);
+.min-width-max(30em{
+    input, textarea{
+        max-width: 80%;
+    }
+}59.99em);
+
