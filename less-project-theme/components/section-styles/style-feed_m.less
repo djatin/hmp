@@ -92,6 +92,69 @@
     });    
 }
 
+.enquiry-form__results{
+    .d-feed__body > .o-tile{
+        position: relative;
+        padding: 1em;
+        margin-bottom: 1em;
+        text-align: left;
+        background: #fff;
+        border: 1px solid rgba(43,148,217,0.78);
+        .min-width(40em{
+            max-width: 47.75%;
+            margin-right: 1.5%;
+            float: left;
+        });
+        .min-width(60em{
+            max-width: 31.75%;
+            margin-right: 1.58%;
+        });
+        .o-tile__item{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 25%;
+        }
+        .o-tile__body{
+            padding: 0;
+            border: none;
+            .o-tile__title{
+                letter-spacing: normal;
+                margin-top: 0;
+                line-height: normal;
+                margin-top: .2em;
+                min-height: 2.45em;
+                a{
+                    text-transform: none;
+                    text-decoration: none;
+                }
+            }
+            .o-tile__text{ 
+                min-height: 4.5em;
+                margin-left: 0;
+                p{
+                    margin-top: 0;
+                }
+            }
+        }
+        .o-tile__btn{
+            border: none;
+            margin-top: 0;
+            a{
+                background: none;
+                padding: 0;
+                border: none;
+                color: @basecolor;
+                text-transform: none;
+                letter-spacing: normal;
+                &:hover{
+                    color: lighten(@basecolor, 20%);
+                }
+            }
+        }
+    }
+}
+
 
 /*//640px /40em
 .min-width(40em; {

@@ -38,13 +38,14 @@
         // 1px/0.0625em
         .min-width(0.0625em; {
             // show just the icon till you have space for the whole logo
-            width: 6em; // bespoke width
-            height: @siteLogoHeight;
+            width: 58%; // bespoke width
+            height: 6em;
             background: url('../img/skin/logo/no-svg_logo.png') left top no-repeat;
         });
         // show whole logo 
         .min-width(22.5em; {
             width: @siteLogoWidth;
+            height: @siteLogoHeight;
         });
         
     }
@@ -53,6 +54,9 @@
         // 1px/0.0625em
         .min-width(0.0625em; {
             background-image: url('../img/skin/logo/no-svg_logo@x2.png'); 
+            background-size: 100% 100%;
+        });
+        .min-width(22.5em; {
             background-size: @siteLogoWidth auto;
         });
    }

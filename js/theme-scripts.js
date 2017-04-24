@@ -335,6 +335,18 @@ function showHideTakeover () {
           // end non-mustardo
       }
     
+		jQuery('ol.enquiry-results__list > li.list__item:not(.bound)').addClass('bound').click(function(){
+			jQuery(this).find('ul.business__details, .details__contact, .business__feedback, .breakdown').toggle();
+			if (jQuery(this).find('ul.business__details, .details__contact, .business__feedback, .breakdown').is(':visible')) {
+                jQuery(this).find('.enquiry__result__fulldetails').text("Less Detail");
+            } else {
+                jQuery(this).find('.enquiry__result__fulldetails').text("Show Detail");
+            }
+			//$(this).find('.enquiry__result__fulldetails').html('Hide Details');
+		});
+		
+			//$('ul.business__details, business__feedback').css({'display' : 'none'});
+	
       // END DRUPAL THEME SCRIPTS
     }
   };
