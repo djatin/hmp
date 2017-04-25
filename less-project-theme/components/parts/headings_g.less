@@ -16,21 +16,19 @@
 
 .title, .subtitle {
     text-transform: uppercase;
-    
+    .wf-active & {
+        font-family: @font-stack__montersrat;
+    }    
 }
 
 .title {
      //.kilo(); // total height 2.5 x baseline
-    font-weight: 600;
+    //font-weight: 600;
     color: @headingcolor;
-    .wf-active & {
-        font-family: @font-stack__montersrat;
-    }
 }
 
 .subtitle {
     .gamma ();
-    .letterspacing120();
 } 
 
 .copy__hgroup{

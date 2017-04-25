@@ -50,10 +50,12 @@
         flex-flow: row wrap;
         
           //so extras fall in the center
-        -ms-flex-pack: center;
+        /*-ms-flex-pack: center;
         -webkit-justify-content: center;
-        justify-content: center;
-        
+        justify-content: center;*/
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        display: flex;
     });
     
 }
@@ -67,6 +69,7 @@
         -webkit-flex: 1 0 50%;
         flex: 1 0 50%;
         padding: 0 .5em;
+        max-width: 50%;
     });
     // 960px/60em
 	.min-width(60em; {

@@ -11,22 +11,21 @@ things in the banner
 */
 
 .banner {
-	// 320px/20em
-	.min-width(20em; {
+	.min-width(.625em; {
         position: relative;
-        
+        z-index: 450;
+        box-shadow: 0 8px 10px rgba(0,0,0,0.25);
     });
-	// 768px/48em
-	//.min-width(48em; {
-	   //account for navigation
-
-	//});
-    // 1024px/64em
-	//.min-width(64em; {
-	//});
-	// 1248px/78em
-	//.min-width(100em; {
-	//});
+    .min-width(86em{
+        box-shadow: none;
+        &:after{
+            content: '';
+            display: block;
+            height: 2px;
+            box-shadow: 0 4px 6px rgba(0,0,0,1);
+            background: rgba(0, 0, 0, 0.2);
+        }
+    });
 }
 
 
