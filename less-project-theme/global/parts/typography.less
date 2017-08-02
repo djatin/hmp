@@ -80,11 +80,12 @@ ul,
 ol{ 
     margin-top: 0;
     padding : 0 0 0 @baselineunit;
-      list-style-position: inside;
+    //list-style-position: inside;
+    list-style: inherit;
 }
 
 ul {
-    list-style-type: square;   
+    //list-style-type: square;   
 }
     
 ol {
@@ -94,7 +95,10 @@ ol {
 ul li, 
 ol li { 
     margin-top: (@baseline/2 * 1em);
-    list-style: none;
+    //list-style: none;
+    .contentinfo &{
+        list-style: none;
+    }
 }
 
 li li {
@@ -296,6 +300,9 @@ time {
             }
         }
     }
+    .contentinfo{
+        margin-top: 3em;
+    }
 }
 
 .min-width(64.5em{
@@ -426,6 +433,7 @@ time {
                         font-weight: bold;
                         color: @zedblack;
                         font-size: 1em;
+                        margin-top: .63333333em;
                         .min-width(60em{
                             float: left;
                             width: 40%;
@@ -433,7 +441,7 @@ time {
                         });
                     }
                     p{
-                        margin-top: .8em;
+                        margin-top: .63333333em;
                         line-height: 1.3em;
                         color: @zedblack;
                         .min-width(60em{
@@ -505,11 +513,14 @@ time {
                     color: @zedblack;
                 }
                 blockquote{
-                    /*&:before{
-                        content: "\201C";
-                        display: table;
-                        clear: both;
-                    }*/
+                    &:before{
+                        display: none;
+                        .min-width(60em{
+                            display: block;
+                            position: absolute;
+                            margin-left: 20.4%;
+                        });
+                    }
                     //margin-left: 1em;
                     margin-bottom: 1em;
                     font-size: 1em;

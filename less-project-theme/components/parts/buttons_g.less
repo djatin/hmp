@@ -39,12 +39,7 @@ text-decoration : none;
 .letterspacing120();
 color : @btncolor;
 border: 1px solid @btncolor;
-// border radius if required 
-//.rounded(1.5em);
 cursor : pointer;
-// background function
-//background-color : darken(@btnbackgroundcolor, 2%);
-    
 .transition(all @duration-promptly ease-in-out);
     
     &:hover, &:active, &:focus {
@@ -63,6 +58,16 @@ cursor : pointer;
 
 /* Modifiers ------------------- */
 
+.btn--style-1 a{
+    background: @btnbackgroundcolor--2;
+    color: @white;
+    border-color: @btnbackgroundcolor--2;
+    &:hover{
+        opacity: .75;
+        background: @btnbackgroundcolor--2;
+        border-color: @btnbackgroundcolor--2;
+    }
+}
 
 // Ghost
 .btn--style-2 a {
