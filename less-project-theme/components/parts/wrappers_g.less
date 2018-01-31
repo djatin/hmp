@@ -31,7 +31,6 @@ section (semantic wrapper)
 }
 
 .header__wrapper, .admin__wrapper, .wrapper--max-w {
-    .seven-eighths();
     max-width: 78em;
 }
 
@@ -66,6 +65,20 @@ section (semantic wrapper)
     *text-align: left;
 }
 
+.d-section--alignment-none .wrapper--max-w{
+    /*border-bottom: 1px solid @btnbackgroundcolor;
+    padding-bottom: 4%;*/
+}
+
+.d-section--modification-3.d-section--style-banner-1 .o-splash__wrapper:before{
+    content: '';
+    width: 100%;
+    max-width: 90.5%;
+    margin: 0 auto 4%;
+    height: 1px;
+    background: @btnbackgroundcolor;
+    display: block;
+}
 
 // Component in situ 
 

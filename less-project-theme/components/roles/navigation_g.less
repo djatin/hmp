@@ -67,10 +67,10 @@
 
 .menu a, .menu span {
     display: block;
-    padding: 0 0 0 1.75em;
+    padding: .5em 1em;
     font-size: 1em;
     text-decoration: none;
-    color: @grey--dark-2;
+    color: @highlight--color-2;
     &:active, &:focus {
         outline: 0;
     }
@@ -79,8 +79,12 @@
     }
     
 }
-.menu li.first a{
-    padding-left: 0;
+.menu li.last a{
+    background: @highlight--color-3;
+    color: @lightgreybtncolor;
+    &:hover{
+        background: darken(@highlight--color-3, 5%);
+    }
 }
 
 // Submenu -------------------
@@ -90,7 +94,7 @@
 
 // both 
 .global-nav a, .global-nav span, .utility-nav a {
-    .letterspacing60();
+    //.letterspacing60();
     font-weight: 500;
 }
 

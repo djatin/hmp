@@ -47,10 +47,14 @@
 .o-splash__wrapper {
     // 468px/30em
 	.min-width(30em; { 
-        padding: 3em;   
+        padding: 3em; 
+        .d-section--modification-3 &{
+            padding-left: 4.6875%;
+            padding-right: 4.6875%;
+        }
     });
     .o-splash__hgroup{
-        max-width: 50em;
+        max-width: 52em;
         margin: 0 auto;
         .d-section--modification-3 &{
             margin-left: 0;
@@ -177,6 +181,10 @@
         // make the wrapper site infront of the anchor image
         position: relative;
         z-index: @zindex-simple--front;
+        .d-section--modification-3 &{
+            padding-left: ((100-87.5%)/2);
+            padding-right: ((100-87.5%)/2);
+        }
     }
     
     .o-splash__anchor img {
@@ -187,15 +195,24 @@
     }
     
     .title--splash{
-        font-size: 3.675em;
+        font-size: 2.625em;
         .d-section--modification-3 &{
-            font-size: 2.675em;
+            font-size: 1.875em;
         }
     }
      
     .d-section--style-banner[class*="--style-banner-1"], .d-section--style-banner-1 .o-splash {
         height: 28.5em; // 456px
     }    
+    .d-section--modification-3.d-section--style-banner[class*="--style-banner-1"],
+    .d-section--modification-3.d-section--style-banner-1 .o-splash{
+        height: auto;
+    }
+    .d-section--modification-3.d-section--style-banner{
+        .o-splash__hgroup, .o-splash__btn{
+            margin-left: 4.75%;
+        }
+    }
 });
 
 .d-section--style-2 .o-splash__hgroup .title--splash{

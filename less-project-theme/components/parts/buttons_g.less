@@ -36,7 +36,7 @@ line-height: 1;
 text-transform: uppercase;
 text-align: center;
 text-decoration : none;
-.letterspacing120();
+.letterspacing60();
 color : @btncolor;
 border: 1px solid @btncolor;
 cursor : pointer;
@@ -85,11 +85,15 @@ cursor : pointer;
 
 
 //component in situe
-.o-splash__btn[class*='--style-2'] a {
-    border-color: @white;
+//.o-splash__btn[class*='--style-2'] a {
+.o-splash__btn a {
+    border-color: @btnbackgroundcolor;
     color: @white;
+    font-weight: 600;
+    background: @btnbackgroundcolor;
     &:hover {
-        border-color : @btnbackgroundcolor;
+        border-color : lighten(@btnbackgroundcolor, 5%);
+        background : lighten(@btnbackgroundcolor, 5%);
     }
    &:active, &:focus {
         border-color: lighten(@btnbackgroundcolor, 1%);
